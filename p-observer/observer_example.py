@@ -55,12 +55,12 @@ class DigitalClock(Observer):
         second = self._subject.second
         if hour > 12:
             hour -= 12
-            ampm = 'PM'
+            ampm = "PM"
         else:
-            ampm = 'AM'
+            ampm = "AM"
 
         print(f"Digital {hour:02d}:{minute:02d}:{second:02d} {ampm}")
-    
+
 
 class AnalogClock(Observer):
     def __init__(self, s: ClockTimer):
@@ -83,14 +83,16 @@ class AnalogClock(Observer):
         second = self._subject.second
 
         print(f"Analog {hour} hour {minute} minutes {second} seconds")
-    
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     timer = ClockTimer()
 
     with DigitalClock(timer) as digital_clock:
         with AnalogClock(timer) as analog_clock1:
             with AnalogClock(timer) as analog_clock2:
-
-                for i in range(10):
+                for i in range(5):
                     timer.tick()
+
+            for i in range(5):
+                timer.tick()
