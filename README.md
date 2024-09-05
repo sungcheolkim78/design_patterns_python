@@ -32,7 +32,7 @@
 1. Template Method
 1. Visitor
 
-# Design Patterns in Python
+# Design Patterns
 
 Design patterns are reusable solutions to common problems that occur in software design. They are not specific to any programming language, and can be used in many different languages. Design patterns can be used to solve problems such as:
 
